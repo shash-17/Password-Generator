@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Strong Password Generator</h1>
+        <p>Choose password length and click 'Generate'</p>
+        
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="6" max="32" value="12">
+        
+        <button onclick="generatePassword()">Generate Password</button>
+        
+        <input type="text" id="password" readonly>
+        <button onclick="copyToClipboard()">Copy</button>
+        
+        <p id="message"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
